@@ -4,7 +4,7 @@
 # Attribute:: default
 #
 # Copyright 2010, Opscode, Inc
-# FHS location would be /var/lib/chef/ohai_plugins or similar.           
+# FHS location would be /var/lib/chef/ohai_plugins or similar.
 default["vagrant-ohai"]["plugin_path"] = "/etc/chef/vagrant_ohai_plugins"
 
 case node['platform']
@@ -125,4 +125,3 @@ default['wsrep']['sst_method'] = "rsync"
 # SST authentication string. This will be used to send SST to joining nodes.
 # Depends on SST method. For mysqldump method it is wsrep_sst:<wsrep password>
 default['wsrep']['sst_auth'] = default['wsrep']['user'] + ":" + default['wsrep']['password']
-
