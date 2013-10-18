@@ -3,8 +3,14 @@
     "galera": {
       "path": "."
     },
-    "ktc-database": {
-      "locked_version": "0.1.0"
+    "ktc-etcd": {
+      "locked_version": "1.1.4"
+    },
+    "ktc-galera": {
+      "path": "./test/integration/cookbooks/ktc-galera"
+    },
+    "ktc-testing": {
+      "locked_version": "0.0.2"
     },
     "services": {
       "locked_version": "1.1.1"
@@ -14,6 +20,9 @@
     },
     "ark": {
       "locked_version": "0.3.2"
+    },
+    "partial_search": {
+      "locked_version": "1.0.2"
     },
     "ktc-utils": {
       "locked_version": "0.3.3"
@@ -45,47 +54,8 @@
     "xfs": {
       "locked_version": "1.1.0"
     },
-    "openstack-ops-database": {
-      "locked_version": "7.0.0"
-    },
-    "openstack-block-storage": {
-      "locked_version": "7.0.3"
-    },
-    "openstack-identity": {
-      "locked_version": "7.0.0"
-    },
-    "openstack-image": {
-      "locked_version": "7.0.0"
-    },
-    "selinux": {
-      "locked_version": "0.5.6"
-    },
-    "python": {
-      "locked_version": "1.4.0"
-    },
-    "yum": {
-      "locked_version": "2.3.4"
-    },
-    "openstack-compute": {
-      "locked_version": "7.0.0"
-    },
-    "openstack-network": {
-      "locked_version": "7.0.3"
-    },
-    "sysctl": {
-      "locked_version": "0.3.3"
-    },
-    "openstack-dashboard": {
-      "locked_version": "7.0.0"
-    },
-    "apache2": {
-      "locked_version": "1.7.0"
-    },
-    "openstack-metering": {
-      "locked_version": "7.0.4"
-    },
-    "simple_iptables": {
-      "locked_version": "0.3.0"
+    "ubuntu": {
+      "locked_version": "1.1.2"
     }
   }
 }
