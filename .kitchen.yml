@@ -27,6 +27,8 @@ suites:
     mysql:
       allow_remote_root: true
       root_network_acl: '%'
+      tunable:
+        buffer_pool_size: 128M
     openstack:
       developer_mode: true
 
