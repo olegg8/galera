@@ -10,7 +10,7 @@
       "path": "./test/integration/cookbooks/ktc-galera"
     },
     "ktc-testing": {
-      "locked_version": "0.0.2"
+      "locked_version": "0.0.3"
     },
     "services": {
       "locked_version": "1.1.1"
