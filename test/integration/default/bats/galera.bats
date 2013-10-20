@@ -8,10 +8,10 @@
   netstat -tan | grep 3306
 }
 
-@test "mysql show ok" {
-  /usr/bin/mysqlshow
+@test "mysql show databases" {
+  /usr/local/mysql/bin/mysqlshow -uroot -ppassword
 }
 
-@test "mysql status ok" {
-  /usr/bin/mysqladmin version status proc
+@test "mysql status" {
+  /usr/local/mysql/bin/mysqladmin status -uroot -ppassword
 }
