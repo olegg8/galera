@@ -4,7 +4,7 @@
 # Attribute:: default
 #
 # Copyright 2010, Opscode, Inc
-# FHS location would be /var/lib/chef/ohai_plugins or similar.           
+# FHS location would be /var/lib/chef/ohai_plugins or similar.
 default["vagrant-ohai"]["plugin_path"] = "/etc/chef/vagrant_ohai_plugins"
 
 case node['platform']
@@ -23,17 +23,17 @@ end
 default['xtra']['sleep'] = 30
 
 default['mysql']['install_dir'] = "/usr/local"
-default['mysql']['base_dir'] = "#{mysql['install_dir']}/mysql"
-default['mysql']['bin_dir']  = "#{mysql['base_dir']}/bin"
-default['mysql']['mysql_bin'] = "#{mysql['bin_dir']}/mysql"
+default['mysql']['base_dir'] = "#{default['mysql']['install_dir']}/mysql"
+default['mysql']['bin_dir']  = "#{default['mysql']['base_dir']}/bin"
+default['galera']['mysql_bin'] = "#{default['mysql']['bin_dir']}/mysql"
 
-default['mysql']['root_password'] = "password"
+default['mysql']['server_root_password'] = "password"
 
 default['mysql']['conf_dir']  = '/etc/mysql'
 default['mysql']['data_dir'] = "/var/lib/mysql"
 default['mysql']['run_dir']  = "/var/run/mysqld"
-default['mysql']['pid_file'] = "#{mysql['data_dir']}/mysqld.pid"
-default['mysql']['socket']  = "#{mysql['run_dir']}/mysqld.sock"
+default['mysql']['pid_file'] = "#{default['mysql']['data_dir']}/mysqld.pid"
+default['mysql']['socket']  = "#{default['mysql']['run_dir']}/mysqld.sock"
 default['mysql']['port']    = 3306
 default['mysql']['tmp_dir']  = "/tmp"
 
@@ -125,4 +125,3 @@ default['wsrep']['sst_method'] = "rsync"
 # SST authentication string. This will be used to send SST to joining nodes.
 # Depends on SST method. For mysqldump method it is wsrep_sst:<wsrep password>
 default['wsrep']['sst_auth'] = default['wsrep']['user'] + ":" + default['wsrep']['password']
-
